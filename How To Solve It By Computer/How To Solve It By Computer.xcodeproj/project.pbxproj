@@ -12,8 +12,20 @@
 		C6C3F5461F915AB700B93619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C3F5441F915AB700B93619 /* Main.storyboard */; };
 		C6C3F5481F915AB700B93619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C3F5471F915AB700B93619 /* Assets.xcassets */; };
 		C6C3F54B1F915AB700B93619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C3F5491F915AB700B93619 /* LaunchScreen.storyboard */; };
-		C6C3F5551F915BCA00B93619 /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3F5541F915BCA00B93619 /* Counting.swift */; };
+		C6C3F5551F915BCA00B93619 /* FundamentalAlgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3F5541F915BCA00B93619 /* FundamentalAlgs.swift */; };
+		C6E8D3C31F91686800F6ABB7 /* How_To_Solve_It_By_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8D3C21F91686800F6ABB7 /* How_To_Solve_It_By_ComputerTests.swift */; };
+		C6E8D3CB1F9168F100F6ABB7 /* FundamentalAlgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8D3CA1F9168F100F6ABB7 /* FundamentalAlgsTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6E8D3C51F91686800F6ABB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6C3F5351F915AB700B93619 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6C3F53C1F915AB700B93619;
+			remoteInfo = "How To Solve It By Computer";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C6C3F53D1F915AB700B93619 /* How To Solve It By Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How To Solve It By Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,11 +35,22 @@
 		C6C3F5471F915AB700B93619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C3F54A1F915AB700B93619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6C3F54C1F915AB700B93619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6C3F5541F915BCA00B93619 /* Counting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Counting.swift; path = "Fundamental Algorithms/Counting.swift"; sourceTree = "<group>"; };
+		C6C3F5541F915BCA00B93619 /* FundamentalAlgs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FundamentalAlgs.swift; path = "Fundamental Algorithms/FundamentalAlgs.swift"; sourceTree = "<group>"; };
+		C6E8D3C01F91686800F6ABB7 /* How To Solve It By ComputerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "How To Solve It By ComputerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6E8D3C21F91686800F6ABB7 /* How_To_Solve_It_By_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How_To_Solve_It_By_ComputerTests.swift; sourceTree = "<group>"; };
+		C6E8D3C41F91686800F6ABB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6E8D3CA1F9168F100F6ABB7 /* FundamentalAlgsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundamentalAlgsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C6C3F53A1F915AB700B93619 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6E8D3BD1F91686800F6ABB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C3F53F1F915AB700B93619 /* How To Solve It By Computer */,
+				C6E8D3C11F91686800F6ABB7 /* How To Solve It By ComputerTests */,
 				C6C3F53E1F915AB700B93619 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C3F53D1F915AB700B93619 /* How To Solve It By Computer.app */,
+				C6E8D3C01F91686800F6ABB7 /* How To Solve It By ComputerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,9 +111,19 @@
 		C6C3F5561F915BCF00B93619 /* Fundamental Algorithms */ = {
 			isa = PBXGroup;
 			children = (
-				C6C3F5541F915BCA00B93619 /* Counting.swift */,
+				C6C3F5541F915BCA00B93619 /* FundamentalAlgs.swift */,
 			);
 			name = "Fundamental Algorithms";
+			sourceTree = "<group>";
+		};
+		C6E8D3C11F91686800F6ABB7 /* How To Solve It By ComputerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6E8D3C21F91686800F6ABB7 /* How_To_Solve_It_By_ComputerTests.swift */,
+				C6E8D3C41F91686800F6ABB7 /* Info.plist */,
+				C6E8D3CA1F9168F100F6ABB7 /* FundamentalAlgsTest.swift */,
+			);
+			path = "How To Solve It By ComputerTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +146,24 @@
 			productReference = C6C3F53D1F915AB700B93619 /* How To Solve It By Computer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C6E8D3BF1F91686800F6ABB7 /* How To Solve It By ComputerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6E8D3C71F91686800F6ABB7 /* Build configuration list for PBXNativeTarget "How To Solve It By ComputerTests" */;
+			buildPhases = (
+				C6E8D3BC1F91686800F6ABB7 /* Sources */,
+				C6E8D3BD1F91686800F6ABB7 /* Frameworks */,
+				C6E8D3BE1F91686800F6ABB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6E8D3C61F91686800F6ABB7 /* PBXTargetDependency */,
+			);
+			name = "How To Solve It By ComputerTests";
+			productName = "How To Solve It By ComputerTests";
+			productReference = C6E8D3C01F91686800F6ABB7 /* How To Solve It By ComputerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +178,12 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = XYW89PFS48;
 						ProvisioningStyle = Automatic;
+					};
+					C6E8D3BF1F91686800F6ABB7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = XYW89PFS48;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C6C3F53C1F915AB700B93619;
 					};
 				};
 			};
@@ -142,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				C6C3F53C1F915AB700B93619 /* How To Solve It By Computer */,
+				C6E8D3BF1F91686800F6ABB7 /* How To Solve It By ComputerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +217,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6E8D3BE1F91686800F6ABB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -164,13 +231,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6C3F5551F915BCA00B93619 /* Counting.swift in Sources */,
+				C6C3F5551F915BCA00B93619 /* FundamentalAlgs.swift in Sources */,
 				C6C3F5431F915AB700B93619 /* ViewController.swift in Sources */,
 				C6C3F5411F915AB700B93619 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6E8D3BC1F91686800F6ABB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6E8D3CB1F9168F100F6ABB7 /* FundamentalAlgsTest.swift in Sources */,
+				C6E8D3C31F91686800F6ABB7 /* How_To_Solve_It_By_ComputerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6E8D3C61F91686800F6ABB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6C3F53C1F915AB700B93619 /* How To Solve It By Computer */;
+			targetProxy = C6E8D3C51F91686800F6ABB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C6C3F5441F915AB700B93619 /* Main.storyboard */ = {
@@ -311,6 +395,34 @@
 			};
 			name = Release;
 		};
+		C6E8D3C81F91686800F6ABB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XYW89PFS48;
+				INFOPLIST_FILE = "How To Solve It By ComputerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dragomandevelopers.How-To-Solve-It-By-ComputerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/How To Solve It By Computer.app/How To Solve It By Computer";
+			};
+			name = Debug;
+		};
+		C6E8D3C91F91686800F6ABB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XYW89PFS48;
+				INFOPLIST_FILE = "How To Solve It By ComputerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dragomandevelopers.How-To-Solve-It-By-ComputerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/How To Solve It By Computer.app/How To Solve It By Computer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -328,6 +440,15 @@
 			buildConfigurations = (
 				C6C3F5501F915AB700B93619 /* Debug */,
 				C6C3F5511F915AB700B93619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6E8D3C71F91686800F6ABB7 /* Build configuration list for PBXNativeTarget "How To Solve It By ComputerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6E8D3C81F91686800F6ABB7 /* Debug */,
+				C6E8D3C91F91686800F6ABB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
