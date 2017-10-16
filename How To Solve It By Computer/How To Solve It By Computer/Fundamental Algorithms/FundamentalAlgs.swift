@@ -12,6 +12,8 @@ import Foundation
 struct FundamentalAlgs {
     init() { }
     
+    // MARK: - Counting Challenge
+    
     /// Description: Given an array of n students examinations marks (in the range 0 to 100) make a count of the numbers of students that passed the examination.
     ///
     /// - Parameters:
@@ -27,5 +29,45 @@ struct FundamentalAlgs {
             }
         }
         return numPassed
+    }
+    
+    // MARK: - Summation Challenge
+    
+    /// Description: Given an array of n numbers, design an algorithm that adds these numbers and returns the resultant sum. Assume n >= 0
+    ///
+    /// - Parameter intArray: array of integers greater than 0
+    /// - Returns: sum of the array
+    func summation(from intArray : [Int]) -> Int {
+        var finalSum = 0
+        
+        for num in intArray {
+            finalSum += num
+        }
+        
+        return finalSum
+    }
+    
+    //MARK: - Supplementary Summation Coding Challenges
+    
+    func average(of array : [Int]) -> Int {
+        let arraySize = array.count
+        
+        return summation(from: array) / arraySize
+    }
+    
+    func squareOfSums(from intArray : [Int]) -> Int {
+        var finalSum = 0
+        
+        for num in intArray {
+            finalSum += (num * num)
+        }
+        
+        return finalSum
+    }
+    
+    func harmonicMean(from intArray : [Int]) -> Int {
+        var meanValue = 0
+        
+        return meanValue
     }
 }
