@@ -49,6 +49,16 @@ class FundamentalAlgsTest: XCTestCase {
         XCTAssertEqual(e, 55)
         
     }
-
+    
+    func testHarmonicMean() {
+        let arrayOfInts = [1.0, 4.0, 4.0]
+        let answer = fundAlgs.harmonicMean(from: arrayOfInts)
+        XCTAssertEqual(answer, 2.0)
+    }
+    
+    func testAlternatingSign() {
+        let answer = fundAlgs.alternatingSignSeries(for: 19)
+        XCTAssertEqual(answer, 19)
+    }
     
 }
