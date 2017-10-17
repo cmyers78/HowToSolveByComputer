@@ -84,4 +84,23 @@ struct FundamentalAlgs {
         }
         return sum
     }
+    
+    func generateNonMultiplicativeBinaryProgression(for nTerms : Int) -> Int {
+        var value = 1
+        if nTerms == 1 { return 1 }
+        else {
+            for _ in 1...(nTerms - 1) {
+                var tempValue = value + value
+                value = tempValue
+            }
+        }
+        return value
+    }
+    
+    
+    
+    
+    
+    
+    
 }
