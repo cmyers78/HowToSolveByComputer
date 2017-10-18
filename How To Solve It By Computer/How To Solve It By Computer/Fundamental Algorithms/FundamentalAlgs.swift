@@ -46,6 +46,26 @@ struct FundamentalAlgs {
         
         return finalSum
     }
+    // MARK: - Factorial Challenge
+    
+    /// Description: Given a number, compute the factorial of that number. (i.e. : 5! = 5 * 4 * 3 * 2 * 1)
+    ///
+    /// - Parameter number: integer value >= 0
+    /// - Returns: integer value for the factorial. (i.e. : 0! && 1! return 1, 5! returns 120)
+    func factorial(for number : Int) -> Int {
+        var nFactorial = 1
+        if number <= 1 {
+            return 1
+        } else if number > 1 {
+            for i in 2...number {
+                nFactorial *= i
+            }
+        } else {
+            print("Enter non-negative numbers only")
+            return -1
+        }
+        return nFactorial
+    }
     
     //MARK: - Supplementary Summation Coding Challenges
     func average(of array : [Int]) -> Int {
@@ -84,4 +104,23 @@ struct FundamentalAlgs {
         }
         return sum
     }
+    
+    func generateNonMultiplicativeBinaryProgression(for nTerms : Int) -> Int {
+        var value = 1
+        if nTerms == 1 { return 1 }
+        else {
+            for _ in 1...(nTerms - 1) {
+                var tempValue = value + value
+                value = tempValue
+            }
+        }
+        return value
+    }
+    
+    
+    
+    
+    
+    
+    
 }

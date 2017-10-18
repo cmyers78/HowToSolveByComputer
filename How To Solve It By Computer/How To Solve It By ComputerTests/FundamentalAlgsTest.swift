@@ -61,4 +61,17 @@ class FundamentalAlgsTest: XCTestCase {
         XCTAssertEqual(answer, 19)
     }
     
+    func testNonMultiplyBinary() {
+        let answer = fundAlgs.generateNonMultiplicativeBinaryProgression(for: 4)
+        XCTAssertEqual(answer, 8)
+    }
+    
+    func testFactorial() {
+        let answer1 = fundAlgs.factorial(for: 1)
+        XCTAssertEqual(answer1, 1)
+        let answer2 = fundAlgs.factorial(for: 2)
+        XCTAssertEqual(answer2, 2)
+        let answer3 = fundAlgs.factorial(for: 5)
+        XCTAssertEqual(answer3, 120)
+    }
 }
