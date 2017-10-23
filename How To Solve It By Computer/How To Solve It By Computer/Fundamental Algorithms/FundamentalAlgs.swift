@@ -110,7 +110,7 @@ struct FundamentalAlgs {
         if nTerms == 1 { return 1 }
         else {
             for _ in 1...(nTerms - 1) {
-                var tempValue = value + value
+                let tempValue = value + value
                 value = tempValue
             }
         }
