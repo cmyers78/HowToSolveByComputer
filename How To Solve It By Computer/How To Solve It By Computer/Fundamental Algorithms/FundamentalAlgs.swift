@@ -67,6 +67,33 @@ struct FundamentalAlgs {
         return nFactorial
     }
     
+    func fibonacciIterative(for number : Int) -> Int {
+        var fibMinusOne = 1
+        var fibMinusTwo = 0
+        
+        if number <= 1 {
+            return number
+        } else {
+            for _ in 2...number {
+                let holdingNumber = fibMinusOne
+                fibMinusOne = fibMinusOne + fibMinusTwo
+                fibMinusTwo = holdingNumber
+            }
+        }
+        
+        return fibMinusOne
+    }
+    
+    func reverseDigits(from number : Int) -> Int {
+        var reversedNum = 0
+        var mutatedNumber = number
+        while mutatedNumber > 0 {
+            reversedNum = reversedNum * 10 + (mutatedNumber % 10)
+            mutatedNumber = mutatedNumber / 10
+        }
+        
+        return reversedNum
+    }
     //MARK: - Supplementary Summation Coding Challenges
     func average(of array : [Int]) -> Int {
         let arraySize = array.count

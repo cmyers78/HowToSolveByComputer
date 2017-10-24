@@ -74,4 +74,27 @@ class FundamentalAlgsTest: XCTestCase {
         let answer3 = fundAlgs.factorial(for: 5)
         XCTAssertEqual(answer3, 120)
     }
+    
+    func testFibonacci() {
+        let answer1 = fundAlgs.fibonacciIterative(for: 0)
+        XCTAssertEqual(answer1, 0)
+        
+        let answer2 = fundAlgs.fibonacciIterative(for: 1)
+        XCTAssertEqual(answer2, 1)
+        
+        let answer3 = fundAlgs.fibonacciIterative(for: 2)
+        XCTAssertEqual(answer3, 1)
+        
+        let answer4 = fundAlgs.fibonacciIterative(for: 3)
+        XCTAssertEqual(answer4, 2)
+        
+        let answer5 = fundAlgs.fibonacciIterative(for: 7)
+        XCTAssertEqual(answer5, 13)
+    }
+    
+    func testReversedNumber() {
+        let answer1 = fundAlgs.reverseDigits(from: 54321)
+        XCTAssertEqual(answer1, 12345)
+        
+    }
 }
