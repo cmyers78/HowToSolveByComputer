@@ -97,4 +97,9 @@ class FundamentalAlgsTest: XCTestCase {
         XCTAssertEqual(answer1, 12345)
         
     }
+    
+    func testBaseConversion() {
+        let answer1 = fundAlgs.baseConversion(for: 93, toBase: 8)
+        XCTAssertEqual(answer1, 135)
+    }
 }

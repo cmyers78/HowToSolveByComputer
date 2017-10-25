@@ -91,9 +91,36 @@ struct FundamentalAlgs {
             reversedNum = reversedNum * 10 + (mutatedNumber % 10)
             mutatedNumber = mutatedNumber / 10
         }
-        
         return reversedNum
     }
+    
+    /// Base Conversion: convert decimal numbers to any numeric base
+    ///
+    /// - Parameters:
+    ///   - num: decimal number to be converted
+    ///   - toBase: Base system to convert to (i.e octal, binary, ternary)
+    /// - Returns: Integer value in base assigned
+    func baseConversion(for num : Int, toBase : Int) -> Int {
+        var quotient = num
+        var conversion = 0
+        var quotientArray = [Int]()
+        
+        while quotient > 0 {
+            let remainder = quotient % toBase
+            quotientArray.append(remainder)
+            quotient = quotient / toBase
+        }
+        
+        for i in quotientArray.reversed() {
+            conversion = (conversion * 10) + i
+        }
+        
+        return conversion
+        
+        
+    }
+    
+    
     //MARK: - Supplementary Summation Coding Challenges
     func average(of array : [Int]) -> Int {
         let arraySize = array.count
