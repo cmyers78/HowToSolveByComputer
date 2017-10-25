@@ -116,8 +116,6 @@ struct FundamentalAlgs {
         }
         
         return conversion
-        
-        
     }
     
     
