@@ -13,7 +13,7 @@ struct FactoringMethods {
     /// Finds the square root of a number using the Babylonioan or Hero's method
     /// of approximating a square root
     ///
-    ///  [Babylonian or Hero's Method For Square Root Approximation - Wikipedia](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method "Hero's Method")
+    ///  [Babylonian or Hero's Method For Square Root Approximation - Wikipedia](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     /// - Parameter number: Number to be computed
     /// - Returns: square root approximation of input to four decimal places
     func findSquareRoot(of number : Double) -> Double {
