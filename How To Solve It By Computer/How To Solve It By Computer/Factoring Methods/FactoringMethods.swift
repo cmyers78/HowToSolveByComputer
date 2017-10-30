@@ -13,7 +13,7 @@ struct FactoringMethods {
     /// Finds the square root of a number using the Babylonioan or Hero's method
     /// of approximating a square root
     ///
-    ///  [Babylonian or Hero's Method For Square Root Approximation - Wikipedia](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method "Hero's Method")
+    ///  [Babylonian or Hero's Method For Square Root Approximation - Wikipedia](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     /// - Parameter number: Number to be computed
     /// - Returns: square root approximation of input to four decimal places
     func findSquareRoot(of number : Double) -> Double {
@@ -27,5 +27,26 @@ struct FactoringMethods {
         }
         
         return round(firstGuess * 10000) / 10000
+    }
+    
+    /// Finds the smallest possible divisor for a number greater than 1
+    ///
+    /// - Parameter num: UInt value to be computed for smallest divisor
+    /// - Returns: returns smallest divisor, or 1 if prime
+    func smallestDivisor(for num : UInt) -> UInt {
+        assert(num > 0, "This number is not greater than 0")
+        var smallestValue = UInt(1)
+        if num % 2 == 0 {
+            smallestValue = 2
+        } else {
+            let upperBound = UInt(findSquareRoot(of: Double(num)).rounded(.down))
+            for i in stride(from: 3, through: upperBound, by: 2) {
+                if num % i == 0 {
+                    smallestValue = UInt(i)
+                    break
+                } 
+            }
+        }
+        return smallestValue
     }
 }

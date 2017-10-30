@@ -30,5 +30,16 @@ class FactoringMethodsTests: XCTestCase {
         XCTAssertEqual(answer1, expectedAnswer)
     }
     
+    func testSmallestDivisor() {
+        let answer1 = factoringMethods.smallestDivisor(for: 48)
+        XCTAssertEqual(answer1, 2)
+        let answer2 = factoringMethods.smallestDivisor(for: 49)
+        XCTAssertEqual(answer2, 7)
+        let answer3 = factoringMethods.smallestDivisor(for: 35)
+        XCTAssertEqual(answer3, 5)
+        let answer4 = factoringMethods.smallestDivisor(for: 5)
+        XCTAssertEqual(answer4, 1)
+    }
+    
     
 }
