@@ -49,4 +49,17 @@ struct FactoringMethods {
         }
         return smallestValue
     }
+    
+    func greatestCommonDivisor(forLargerNum largerNum : Int, smallerNum : Int) -> Int {
+        var largerValue = largerNum
+        var smallerValue = smallerNum
+        
+        while smallerValue > 0 {
+            let temp = largerValue % smallerValue
+            largerValue = smallerValue
+            smallerValue = temp
+        }
+        print("GCD is: \(largerValue)")
+        return largerValue
+    }
 }

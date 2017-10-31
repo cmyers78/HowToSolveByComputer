@@ -41,5 +41,12 @@ class FactoringMethodsTests: XCTestCase {
         XCTAssertEqual(answer4, 1)
     }
     
+    func testGCD() {
+        let answer1 = factoringMethods.greatestCommonDivisor(forLargerNum: 30, smallerNum: 18)
+        let answer2 = factoringMethods.greatestCommonDivisor(forLargerNum: 100, smallerNum: 80)
+        XCTAssertEqual(answer1, 6)
+        XCTAssertEqual(answer2, 20)
+    }
+    
     
 }
