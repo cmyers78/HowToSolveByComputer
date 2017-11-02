@@ -50,6 +50,12 @@ struct FactoringMethods {
         return smallestValue
     }
     
+    /// Finds the greatest common divisor of two integers using Euclidean method
+    ///
+    /// - Parameters:
+    ///   - largerNum: larger number to find GCD
+    ///   - smallerNum: smaller number to find GCD
+    /// - Returns: largest possible divisor of two numbers. Ex: GCD of 30 and 18 is 6
     func greatestCommonDivisor(forLargerNum largerNum : Int, smallerNum : Int) -> Int {
         var largerValue = largerNum
         var smallerValue = smallerNum
@@ -61,5 +67,27 @@ struct FactoringMethods {
         }
         print("GCD is: \(largerValue)")
         return largerValue
+    }
+    
+    /// Generates all prime numbers up to the given input value
+    ///
+    /// - Parameter num: value limit
+    /// - Returns: array of all prime integers up to the value limit
+    func primeNumberGenerator(forNumbersRangingto num : Int) -> [Int] {
+        var primesArray = [2]
+        guard num > 2 else { return [] }
+        for num in stride(from: 3, through: num, by: 2) {
+            var isPrime = true
+            for prime in primesArray {
+                if num % prime == 0 {
+                    isPrime = false
+                    break
+                }
+            }
+            if isPrime == true {
+                primesArray.append(num)
+            }
+        }
+        return primesArray
     }
 }

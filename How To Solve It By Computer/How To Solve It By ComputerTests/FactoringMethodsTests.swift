@@ -48,5 +48,12 @@ class FactoringMethodsTests: XCTestCase {
         XCTAssertEqual(answer2, 20)
     }
     
+    func testPrimeNumberGenerator() {
+        let numbers = factoringMethods.primeNumberGenerator(forNumbersRangingto: 100)
+        XCTAssertEqual(numbers.count, 25)
+        let answer2 = numbers.contains(41)
+        XCTAssert(answer2)
+    }
+    
     
 }
