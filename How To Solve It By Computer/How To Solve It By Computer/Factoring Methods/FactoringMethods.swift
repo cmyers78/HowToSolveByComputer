@@ -49,4 +49,64 @@ struct FactoringMethods {
         }
         return smallestValue
     }
+    
+    /// Finds the greatest common divisor of two integers using Euclidean method
+    ///
+    /// - Parameters:
+    ///   - largerNum: larger number to find GCD
+    ///   - smallerNum: smaller number to find GCD
+    /// - Returns: largest possible divisor of two numbers. Ex: GCD of 30 and 18 is 6
+    func greatestCommonDivisor(forLargerNum largerNum : Int, smallerNum : Int) -> Int {
+        var largerValue = largerNum
+        var smallerValue = smallerNum
+        
+        while smallerValue > 0 {
+            let temp = largerValue % smallerValue
+            largerValue = smallerValue
+            smallerValue = temp
+        }
+        print("GCD is: \(largerValue)")
+        return largerValue
+    }
+    
+    /// Generates all prime numbers up to the given input value
+    ///
+    /// - Parameter num: value limit
+    /// - Returns: array of all prime integers up to the value limit
+    func primeNumberGenerator(forNumbersRangingTo num : Int) -> [Int] {
+        var primesArray = [2, 3]
+        guard num > 2 else { return [] }
+        for num in stride(from: 3, through: num, by: 2) {
+            var isPrime = true
+            for prime in primesArray[1..<primesArray.count] {
+                if num % prime == 0 {
+                    isPrime = false
+                    break
+                }
+            }
+            if isPrime == true {
+                primesArray.append(num)
+            }
+        }
+        return primesArray
+    }
+    
+    func largeValueExponents(forBase base : Int, power : Int) -> Int {
+        guard power > 0 else { return 1 }
+        var product = 1
+        var powerSequence = base
+        var mutatingPower = power
+        
+        while mutatingPower > 0 {
+            if mutatingPower % 2 == 1 {
+                product *= powerSequence
+                mutatingPower /= 2
+                powerSequence *= powerSequence
+            } else {
+                powerSequence *= powerSequence
+                mutatingPower /= 2
+            }
+        }
+        return product
+    }
 }
