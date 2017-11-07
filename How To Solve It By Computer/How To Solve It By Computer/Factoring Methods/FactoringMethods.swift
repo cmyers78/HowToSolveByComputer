@@ -73,12 +73,12 @@ struct FactoringMethods {
     ///
     /// - Parameter num: value limit
     /// - Returns: array of all prime integers up to the value limit
-    func primeNumberGenerator(forNumbersRangingto num : Int) -> [Int] {
-        var primesArray = [2]
+    func primeNumberGenerator(forNumbersRangingTo num : Int) -> [Int] {
+        var primesArray = [2, 3]
         guard num > 2 else { return [] }
         for num in stride(from: 3, through: num, by: 2) {
             var isPrime = true
-            for prime in primesArray {
+            for prime in primesArray[1..<primesArray.count] {
                 if num % prime == 0 {
                     isPrime = false
                     break
@@ -89,5 +89,24 @@ struct FactoringMethods {
             }
         }
         return primesArray
+    }
+    
+    func largeValueExponents(forBase base : Int, power : Int) -> Int {
+        guard power > 0 else { return 1 }
+        var product = 1
+        var powerSequence = base
+        var mutatingPower = power
+        
+        while mutatingPower > 0 {
+            if mutatingPower % 2 == 1 {
+                product *= powerSequence
+                mutatingPower /= 2
+                powerSequence *= powerSequence
+            } else {
+                powerSequence *= powerSequence
+                mutatingPower /= 2
+            }
+        }
+        return product
     }
 }
