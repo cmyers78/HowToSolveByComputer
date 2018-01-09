@@ -12,8 +12,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let answer = FundamentalAlgs().passOrFail(from: [98, 34, 23, 100, 88], withPassValue: 70)
-        print(answer)
+
     }
 
 }
