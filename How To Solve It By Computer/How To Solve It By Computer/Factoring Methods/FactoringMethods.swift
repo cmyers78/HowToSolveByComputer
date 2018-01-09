@@ -100,9 +100,11 @@ struct FactoringMethods {
         while mutatingPower > 0 {
             if mutatingPower % 2 == 1 {
                 product *= powerSequence
+                // power sequence  and mutating power are changed regardless of mutating power even or odd
                 mutatingPower /= 2
                 powerSequence *= powerSequence
             } else {
+                // power sequence  and mutating power are changed regardless of mutating power even or odd
                 powerSequence *= powerSequence
                 mutatingPower /= 2
             }
