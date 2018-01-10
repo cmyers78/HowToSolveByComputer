@@ -24,4 +24,14 @@ struct ArrayTechniques {
         
         return reversedArr
     }
+    
+    func studentScoreHistogramming(from marks : [Int]) -> [Int] {
+        var histoArray = Array(repeating: 0, count: 101)
+        
+        for mark in marks {
+            histoArray[mark] += 1
+        }
+        
+        return histoArray
+    }
 }

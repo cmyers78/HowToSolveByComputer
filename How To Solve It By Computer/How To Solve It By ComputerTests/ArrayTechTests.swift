@@ -34,4 +34,13 @@ class ArrayTechTests: XCTestCase {
         
     }
     
+    func testHistoArray() {
+        let answer1 = arrayTechniques.studentScoreHistogramming(from: [0,0,0,2,5,6,87,99,99,99,100,23,0, 1, 1, 1, 2, 45, 45, 53])
+        let expectedAnswer = 3
+        XCTAssertEqual(answer1[99], expectedAnswer)
+        XCTAssertEqual(answer1[0], 4)
+        XCTAssertEqual(answer1[1], 3)
+        XCTAssertEqual(answer1[88], 0)
+        
+    }
 }
