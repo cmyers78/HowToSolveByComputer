@@ -34,4 +34,14 @@ struct ArrayTechniques {
         
         return histoArray
     }
+    
+    func findMaxNumber(inArray arr : [Int]) -> Int {
+        guard var currentMax = arr.first else { return 0 }
+        
+        for num in arr {
+            currentMax = max(num, currentMax)
+        }
+        
+        return currentMax
+    }
 }

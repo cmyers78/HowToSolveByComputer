@@ -43,4 +43,10 @@ class ArrayTechTests: XCTestCase {
         XCTAssertEqual(answer1[88], 0)
         
     }
+    
+    func testMaxValueArray() {
+        let answer1 = arrayTechniques.findMaxNumber(inArray: [8, 9, 2, 4, 19, 22, 17, 8, 13, 12, 24, 5, 1, 0, 8])
+        let expectedMax = 24
+        XCTAssertEqual(answer1, expectedMax)
+    }
 }
