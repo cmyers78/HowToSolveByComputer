@@ -24,4 +24,38 @@ struct ArrayTechniques {
         
         return reversedArr
     }
+    
+    func studentScoreHistogramming(from marks : [Int]) -> [Int] {
+        var histoArray = Array(repeating: 0, count: 101)
+        
+        for mark in marks {
+            histoArray[mark] += 1
+        }
+        
+        return histoArray
+    }
+    
+    func findMaxNumber(inArray arr : [Int]) -> Int {
+        guard var currentMax = arr.first else { return 0 }
+        
+        for num in arr {
+            currentMax = max(num, currentMax)
+        }
+        
+        return currentMax
+    }
+    
+    func removeDuplicates(fromArray arr : [Int]) -> [Int] {
+        var parsedArray = [Int]()
+        
+        for num in arr {
+            if parsedArray.contains(num) {
+                print("items already exists")
+            } else {
+                parsedArray.append(num)
+            }
+        }
+        
+        return parsedArray
+    }
 }

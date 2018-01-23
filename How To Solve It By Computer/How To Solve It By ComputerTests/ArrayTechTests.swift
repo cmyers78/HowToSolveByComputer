@@ -34,4 +34,25 @@ class ArrayTechTests: XCTestCase {
         
     }
     
+    func testHistoArray() {
+        let answer1 = arrayTechniques.studentScoreHistogramming(from: [0,0,0,2,5,6,87,99,99,99,100,23,0, 1, 1, 1, 2, 45, 45, 53])
+        let expectedAnswer = 3
+        XCTAssertEqual(answer1[99], expectedAnswer)
+        XCTAssertEqual(answer1[0], 4)
+        XCTAssertEqual(answer1[1], 3)
+        XCTAssertEqual(answer1[88], 0)
+        
+    }
+    
+    func testMaxValueArray() {
+        let answer1 = arrayTechniques.findMaxNumber(inArray: [8, 9, 2, 4, 19, 22, 17, 8, 13, 12, 24, 5, 1, 0, 8])
+        let expectedMax = 24
+        XCTAssertEqual(answer1, expectedMax)
+    }
+    
+    func testRemoveDuplicates() {
+        let array = arrayTechniques.removeDuplicates(fromArray: [1, 2, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8, 8, 9])
+        let expectedCount = 9
+        XCTAssertEqual(array.count, expectedCount)
+    }
 }
