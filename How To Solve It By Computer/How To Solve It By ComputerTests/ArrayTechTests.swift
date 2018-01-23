@@ -49,4 +49,10 @@ class ArrayTechTests: XCTestCase {
         let expectedMax = 24
         XCTAssertEqual(answer1, expectedMax)
     }
+    
+    func testRemoveDuplicates() {
+        let array = arrayTechniques.removeDuplicates(fromArray: [1, 2, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8, 8, 9])
+        let expectedCount = 9
+        XCTAssertEqual(array.count, expectedCount)
+    }
 }

@@ -44,4 +44,18 @@ struct ArrayTechniques {
         
         return currentMax
     }
+    
+    func removeDuplicates(fromArray arr : [Int]) -> [Int] {
+        var parsedArray = [Int]()
+        
+        for num in arr {
+            if parsedArray.contains(num) {
+                print("items already exists")
+            } else {
+                parsedArray.append(num)
+            }
+        }
+        
+        return parsedArray
+    }
 }
