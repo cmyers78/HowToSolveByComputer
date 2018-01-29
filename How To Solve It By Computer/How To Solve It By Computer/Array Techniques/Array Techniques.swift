@@ -58,4 +58,25 @@ struct ArrayTechniques {
         
         return parsedArray
     }
+    
+    func partitionArray(forValue x : Int, withArray arr : [Int]) -> [Int] {
+        var partitionedArray = arr
+        var startIndex = 0
+        var endIndex = partitionedArray.count - 1
+        
+        while startIndex <= endIndex {
+            if startIndex <= x {
+                startIndex += 1
+            } else if endIndex > x {
+                endIndex -= 1
+            } else {
+                let temp = partitionedArray[startIndex]
+                partitionedArray[startIndex] = partitionedArray[endIndex]
+                partitionedArray[endIndex] = temp
+                startIndex += 1
+                endIndex -= 1
+            }
+        }
+        return partitionedArray
+    }
 }

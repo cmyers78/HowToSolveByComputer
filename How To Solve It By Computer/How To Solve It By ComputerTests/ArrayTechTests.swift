@@ -55,4 +55,13 @@ class ArrayTechTests: XCTestCase {
         let expectedCount = 9
         XCTAssertEqual(array.count, expectedCount)
     }
+    
+    func testPartitionArray() {
+        let arr = [6,28, 26, 25, 27, 29, 21, 33, 9, 7, 11, 16, 12, 24, 29, 6, 10, 11, 22, 8, 28, 2, 6, 5, 43, 21, 32, 8, 9, 16, 13]
+        let resultArray = arrayTechniques.partitionArray(forValue: 17, withArray: arr)
+        let aboveValueCount = resultArray.filter { $0 > 17}.count
+        print(aboveValueCount)
+        XCTAssertEqual(aboveValueCount, 14)
+        
+    }
 }
