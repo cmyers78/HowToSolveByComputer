@@ -64,4 +64,12 @@ class ArrayTechTests: XCTestCase {
         XCTAssertEqual(aboveValueCount, 14)
         
     }
+    
+    func testKthSmallestElement() {
+        let arr = [4, 9, 1, 11, 2, 7, 8, 5]
+        let result = arrayTechniques.kSelect(from: arr, withKValue: 4)
+        // result should return the array sorted around the 4th smallest element
+        let resultValue = result.kThSmallestelement
+        XCTAssertEqual(resultValue, 5)
+    }
 }
