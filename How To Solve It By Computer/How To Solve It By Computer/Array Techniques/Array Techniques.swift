@@ -76,11 +76,11 @@ struct ArrayTechniques {
         return partitionedArray
     }
     
-    /// Finding the kth smallest element in an unordered array using paritioning around an unknown value, but known index in an array.  After the inner while loops complete, the vlaues of the upper and lower bounds of the entire array are changed to reflect whether the index value was found in the upper or lower partition. This runs until the while loop has pseudo-sorted the array around the index value. Pseudo-sorted because the array is definitely not in sorted order, but all values below the final value of k are to the left of it in the array, and all values greater are to the right of it in the array, just not in ascending order. (e.g. - 3rd smallest element is pivot so array could look like: [2, 1, 8, 12, 10, 9]
+    /// Finding the kth smallest element in an unordered array using paritioning around an unknown value, but known index in an array.  After the inner while loops complete, the vlaues of the upper and lower bounds of the entire array are changed to reflect whether the index value was found in the upper or lower partition. This runs until the while loop has pseudo-sorted the array around the index value. Pseudo-sorted because the array is definitely not in sorted order, but all values below the final value of k are to the left of it in the array, and all values greater are to the right of it in the array, just not in ascending order. (e.g. - 3rd smallest element is pivot so array could look like: [2, 1, 8, 12, 10, 9] where 8 is 3rd smallest element.
     ///
     /// - Parameters:
     ///   - arr: unordered array (Integers for now)
-    ///   - k: the number of element you want to find (e.g. - 4th smallest element in the array)
+    ///   - k: the index of element you want to find (e.g. - 4th smallest element in the array)
     /// - Returns: returns the array paritioned at that value of k and the value at that partition)
     func kSelect(from arr : [Int], withKValue k : Int) -> (partitionedArray: [Int], kThSmallestelement : Int) {
         var a = arr
@@ -106,7 +106,7 @@ struct ArrayTechniques {
                 while a[j] > currentGuess {
                     j -= 1
                 }
-                // swap
+                // swap (Note: can use Swift's swapAt method too...just wanted to be as explicit as possible)
                 temp = a[i]
                 a[i] = a[j]
                 a[j] = temp
@@ -130,4 +130,6 @@ struct ArrayTechniques {
         // return elements and value of the kTh element
         return (a, a[kValue])
     }
+    
+    
 }
