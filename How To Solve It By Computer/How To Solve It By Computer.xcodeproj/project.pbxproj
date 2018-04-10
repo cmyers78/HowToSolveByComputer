@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C600B5C22004EEA700A77497 /* ArrayTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600B5C12004EEA700A77497 /* ArrayTechTests.swift */; };
 		C6142F8A2004DFF300D5DC60 /* Array Techniques.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6142F892004DFF300D5DC60 /* Array Techniques.swift */; };
+		C644304F207CCBEC005DE85D /* Sorting Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644304E207CCBEC005DE85D /* Sorting Algorithms.swift */; };
+		C6443053207CD40B005DE85D /* SortingAlgorithmsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6443052207CD40B005DE85D /* SortingAlgorithmsTest.swift */; };
 		C6B431AF1FA0A6E400C6CCB4 /* FactoringMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B431AE1FA0A6E400C6CCB4 /* FactoringMethods.swift */; };
 		C6B431B11FA0A70F00C6CCB4 /* FactoringMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B431B01FA0A70F00C6CCB4 /* FactoringMethodsTests.swift */; };
 		C6C3F5411F915AB700B93619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3F5401F915AB700B93619 /* AppDelegate.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		C600B5C12004EEA700A77497 /* ArrayTechTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTechTests.swift; sourceTree = "<group>"; };
 		C6142F892004DFF300D5DC60 /* Array Techniques.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array Techniques.swift"; sourceTree = "<group>"; };
+		C644304E207CCBEC005DE85D /* Sorting Algorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sorting Algorithms.swift"; sourceTree = "<group>"; };
+		C6443052207CD40B005DE85D /* SortingAlgorithmsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingAlgorithmsTest.swift; sourceTree = "<group>"; };
 		C6B431AE1FA0A6E400C6CCB4 /* FactoringMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoringMethods.swift; sourceTree = "<group>"; };
 		C6B431B01FA0A70F00C6CCB4 /* FactoringMethodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoringMethodsTests.swift; sourceTree = "<group>"; };
 		C6C3F53D1F915AB700B93619 /* How To Solve It By Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How To Solve It By Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,14 @@
 			path = "Array Techniques";
 			sourceTree = "<group>";
 		};
+		C644304D207CCBCD005DE85D /* Sorting Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				C644304E207CCBEC005DE85D /* Sorting Algorithms.swift */,
+			);
+			path = "Sorting Algorithms";
+			sourceTree = "<group>";
+		};
 		C6B431AB1FA0A69D00C6CCB4 /* Factoring Methods */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +117,7 @@
 		C6C3F53F1F915AB700B93619 /* How To Solve It By Computer */ = {
 			isa = PBXGroup;
 			children = (
+				C644304D207CCBCD005DE85D /* Sorting Algorithms */,
 				C6C3F5531F915AF500B93619 /* AppDelegate */,
 				C6C3F5421F915AB700B93619 /* ViewController.swift */,
 				C6142F882004DFD500D5DC60 /* Array Techniques */,
@@ -150,6 +163,7 @@
 				C6E8D3CA1F9168F100F6ABB7 /* FundamentalAlgsTest.swift */,
 				C6B431B01FA0A70F00C6CCB4 /* FactoringMethodsTests.swift */,
 				C600B5C12004EEA700A77497 /* ArrayTechTests.swift */,
+				C6443052207CD40B005DE85D /* SortingAlgorithmsTest.swift */,
 			);
 			path = "How To Solve It By ComputerTests";
 			sourceTree = "<group>";
@@ -199,7 +213,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Dragoman Developers";
 				TargetAttributes = {
 					C6C3F53C1F915AB700B93619 = {
@@ -264,6 +278,7 @@
 				C6C3F5551F915BCA00B93619 /* FundamentalAlgs.swift in Sources */,
 				C6C3F5431F915AB700B93619 /* ViewController.swift in Sources */,
 				C6142F8A2004DFF300D5DC60 /* Array Techniques.swift in Sources */,
+				C644304F207CCBEC005DE85D /* Sorting Algorithms.swift in Sources */,
 				C6B431AF1FA0A6E400C6CCB4 /* FactoringMethods.swift in Sources */,
 				C6C3F5411F915AB700B93619 /* AppDelegate.swift in Sources */,
 			);
@@ -273,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6443053207CD40B005DE85D /* SortingAlgorithmsTest.swift in Sources */,
 				C6E8D3CB1F9168F100F6ABB7 /* FundamentalAlgsTest.swift in Sources */,
 				C600B5C22004EEA700A77497 /* ArrayTechTests.swift in Sources */,
 				C6B431B11FA0A70F00C6CCB4 /* FactoringMethodsTests.swift in Sources */,
@@ -324,6 +340,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -331,6 +348,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -380,6 +398,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -387,6 +406,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
