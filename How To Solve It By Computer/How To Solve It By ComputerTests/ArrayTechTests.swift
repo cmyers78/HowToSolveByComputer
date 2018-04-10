@@ -16,7 +16,6 @@ class ArrayTechTests: XCTestCase {
     override func setUp() {
         super.setUp()
         arrayTechniques = ArrayTechniques()
-        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -24,14 +23,12 @@ class ArrayTechTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
         arrayTechniques = nil
-        
     }
     
     func testReverseArray() {
         let answer1 = arrayTechniques.reverseOrder(forArray: [4, 5, 6, 7, 8])
         let expectedAnswer = [8, 7, 6, 5, 4]
         XCTAssertEqual(answer1, expectedAnswer)
-        
     }
     
     func testHistoArray() {
@@ -41,7 +38,6 @@ class ArrayTechTests: XCTestCase {
         XCTAssertEqual(answer1[0], 4)
         XCTAssertEqual(answer1[1], 3)
         XCTAssertEqual(answer1[88], 0)
-        
     }
     
     func testMaxValueArray() {
