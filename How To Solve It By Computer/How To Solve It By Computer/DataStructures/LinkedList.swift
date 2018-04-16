@@ -35,6 +35,16 @@ public class LinkedList<T> {
         return tail
     }
     
+    public var count : Int {
+        var count = 0
+        var start = head
+        while start != nil {
+            count += 1
+            start = start?.next
+        }
+        return count
+    }
+    
     public func append(value : T) {
         let newNode = Node(value: value)
         

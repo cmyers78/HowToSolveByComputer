@@ -19,10 +19,11 @@ class ViewController: UIViewController {
         dogBreeds.append(value: "Great Dane")
         
         print(dogBreeds)
-        
+        print(dogBreeds.count)
         let removed = dogBreeds.remove(node: dogBreeds.nodeAt(index: 2)!)
         print(dogBreeds)
         print("removed: \(removed)")
+        print(dogBreeds.count)
         
     }
 
