@@ -12,7 +12,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let dogBreeds = LinkedList<String>()
+        dogBreeds.append(value: "Labrador")
+        dogBreeds.append(value: "Bulldog")
+        dogBreeds.append(value: "Beagle")
+        dogBreeds.append(value: "Great Dane")
+        
+        print(dogBreeds)
+        
+        let removed = dogBreeds.remove(node: dogBreeds.nodeAt(index: 2)!)
+        print(dogBreeds)
+        print("removed: \(removed)")
+        
     }
 
 }

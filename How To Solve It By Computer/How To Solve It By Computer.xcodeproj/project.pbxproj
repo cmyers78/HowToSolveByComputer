@@ -19,6 +19,7 @@
 		C6C3F5481F915AB700B93619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C3F5471F915AB700B93619 /* Assets.xcassets */; };
 		C6C3F54B1F915AB700B93619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C3F5491F915AB700B93619 /* LaunchScreen.storyboard */; };
 		C6C3F5551F915BCA00B93619 /* FundamentalAlgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3F5541F915BCA00B93619 /* FundamentalAlgs.swift */; };
+		C6C463CC20850A9900BD73C2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C463CB20850A9900BD73C2 /* LinkedList.swift */; };
 		C6E8D3C31F91686800F6ABB7 /* How_To_Solve_It_By_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8D3C21F91686800F6ABB7 /* How_To_Solve_It_By_ComputerTests.swift */; };
 		C6E8D3CB1F9168F100F6ABB7 /* FundamentalAlgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8D3CA1F9168F100F6ABB7 /* FundamentalAlgsTest.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		C6C3F54A1F915AB700B93619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6C3F54C1F915AB700B93619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6C3F5541F915BCA00B93619 /* FundamentalAlgs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FundamentalAlgs.swift; path = "Fundamental Algorithms/FundamentalAlgs.swift"; sourceTree = "<group>"; };
+		C6C463CB20850A9900BD73C2 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		C6E8D3C01F91686800F6ABB7 /* How To Solve It By ComputerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "How To Solve It By ComputerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E8D3C21F91686800F6ABB7 /* How_To_Solve_It_By_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How_To_Solve_It_By_ComputerTests.swift; sourceTree = "<group>"; };
 		C6E8D3C41F91686800F6ABB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		C6C3F53F1F915AB700B93619 /* How To Solve It By Computer */ = {
 			isa = PBXGroup;
 			children = (
+				C6C463CA20850A8400BD73C2 /* DataStructures */,
 				C644304D207CCBCD005DE85D /* Sorting Algorithms */,
 				C6C3F5531F915AF500B93619 /* AppDelegate */,
 				C6C3F5421F915AB700B93619 /* ViewController.swift */,
@@ -153,6 +156,14 @@
 				C6C3F5541F915BCA00B93619 /* FundamentalAlgs.swift */,
 			);
 			name = "Fundamental Algorithms";
+			sourceTree = "<group>";
+		};
+		C6C463CA20850A8400BD73C2 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				C6C463CB20850A9900BD73C2 /* LinkedList.swift */,
+			);
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 		C6E8D3C11F91686800F6ABB7 /* How To Solve It By ComputerTests */ = {
@@ -281,6 +292,7 @@
 				C644304F207CCBEC005DE85D /* Sorting Algorithms.swift in Sources */,
 				C6B431AF1FA0A6E400C6CCB4 /* FactoringMethods.swift in Sources */,
 				C6C3F5411F915AB700B93619 /* AppDelegate.swift in Sources */,
+				C6C463CC20850A9900BD73C2 /* LinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
