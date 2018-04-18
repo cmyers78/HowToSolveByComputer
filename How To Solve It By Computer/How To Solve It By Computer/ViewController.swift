@@ -30,8 +30,7 @@ class ViewController: UIViewController {
     }
     
     func removeDuplicates(from list : inout LinkedList<String>) -> LinkedList<String> {
-        var count = 0
-        var start = list.nodeAt(index: count)
+        var start = list.first
         var set = Set<String>()
         
         while start != nil {
@@ -40,8 +39,7 @@ class ViewController: UIViewController {
             } else {
                 set.insert(start!.value)
             }
-            count += 1
-            start = list.nodeAt(index: count)
+            start = start?.next
         }
         return list
     }
