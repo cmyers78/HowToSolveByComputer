@@ -44,7 +44,7 @@ public class LinkedList<T> {
         }
         return count
     }
-    
+
     public func append(value : T) {
         let newNode = Node(value: value)
         
