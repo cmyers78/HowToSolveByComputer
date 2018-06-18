@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: How To Solve It By Computer.xcodeproj
+xcode_scheme: How To Solve It By ComputerTests
