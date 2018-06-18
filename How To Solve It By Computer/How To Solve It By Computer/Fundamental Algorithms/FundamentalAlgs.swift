@@ -22,10 +22,8 @@ struct FundamentalAlgs {
     func passOrFail(from arrayOfScores : [Int], withPassValue : Int) -> Int {
         var numPassed = 0
         
-        for score in arrayOfScores {
-            if score > withPassValue {
+        for score in arrayOfScores where score > withPassValue {
                 numPassed += 1
-            }
         }
         return numPassed
     }
@@ -56,8 +54,8 @@ struct FundamentalAlgs {
         if number <= 1 {
             return 1
         } else if number > 1 {
-            for i in 2...number {
-                nFactorial *= i
+            for idx in 2...number {
+                nFactorial *= idx
             }
         } else {
             print("Enter non-negative numbers only")
@@ -75,7 +73,7 @@ struct FundamentalAlgs {
         } else {
             for _ in 2...number {
                 let holdingNumber = fibMinusOne
-                fibMinusOne = fibMinusOne + fibMinusTwo
+                fibMinusOne += fibMinusTwo
                 fibMinusTwo = holdingNumber
             }
         }
@@ -88,7 +86,7 @@ struct FundamentalAlgs {
         var mutatedNumber = number
         while mutatedNumber > 0 {
             reversedNum = reversedNum * 10 + (mutatedNumber % 10)
-            mutatedNumber = mutatedNumber / 10
+            mutatedNumber /= 10
         }
         return reversedNum
     }
@@ -107,18 +105,17 @@ struct FundamentalAlgs {
         while quotient > 0 {
             let remainder = quotient % toBase
             quotientArray.append(remainder)
-            quotient = quotient / toBase
+            quotient /= toBase
         }
         
-        for i in quotientArray.reversed() {
-            conversion = (conversion * 10) + i
+        for idx in quotientArray.reversed() {
+            conversion = (conversion * 10) + idx
         }
         
         return conversion
     }
     
-    
-    //MARK: - Supplementary Summation Coding Challenges
+    // MARK: - Supplementary Summation Coding Challenges
     func average(of array : [Int]) -> Int {
         let arraySize = array.count
         return summation(from: array) / arraySize
@@ -145,11 +142,11 @@ struct FundamentalAlgs {
         if nTerms == 1 { return 1 }
         var value = 1
         var sum = 1
-        for i in 1...(nTerms - 1) {
-            if i % 2 == 1 {
-                value += (i * -4)
+        for idx in 1...(nTerms - 1) {
+            if idx % 2 == 1 {
+                value += (idx * -4)
             } else {
-                value += (i * 4)
+                value += (idx * 4)
             }
             sum += value
         }
@@ -158,8 +155,7 @@ struct FundamentalAlgs {
     
     func generateNonMultiplicativeBinaryProgression(for nTerms : Int) -> Int {
         var value = 1
-        if nTerms == 1 { return 1 }
-        else {
+        if nTerms == 1 { return 1 } else {
             for _ in 1...(nTerms - 1) {
                 let tempValue = value + value
                 value = tempValue
@@ -167,11 +163,5 @@ struct FundamentalAlgs {
         }
         return value
     }
-    
-    
-    
-    
-    
-    
     
 }

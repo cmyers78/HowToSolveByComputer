@@ -40,11 +40,9 @@ struct FactoringMethods {
             smallestValue = 2
         } else {
             let upperBound = UInt(findSquareRoot(of: Double(num)).rounded(.down))
-            for i in stride(from: 3, through: upperBound, by: 2) {
-                if num % i == 0 {
-                    smallestValue = UInt(i)
+            for idx in stride(from: 3, through: upperBound, by: 2) where num % idx == 0 {
+                    smallestValue = UInt(idx)
                     break
-                } 
             }
         }
         return smallestValue
@@ -78,11 +76,9 @@ struct FactoringMethods {
         guard num > 2 else { return [] }
         for num in stride(from: 3, through: num, by: 2) {
             var isPrime = true
-            for prime in primesArray[1..<primesArray.count] {
-                if num % prime == 0 {
+            for prime in primesArray[1..<primesArray.count] where num % prime == 0 {
                     isPrime = false
                     break
-                }
             }
             if isPrime == true {
                 primesArray.append(num)

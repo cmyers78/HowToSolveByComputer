@@ -16,10 +16,10 @@ struct ArrayTechniques {
         let sizeOfArray = arr.count
         let numberOfExchanges = sizeOfArray / 2
         
-        for i in 0...(numberOfExchanges) {
-            let temp = arr[i]
-            reversedArr[i] = arr[(sizeOfArray - 1) - i]
-            reversedArr[(sizeOfArray - 1) - i] = temp
+        for idx in 0...(numberOfExchanges) {
+            let temp = arr[idx]
+            reversedArr[idx] = arr[(sizeOfArray - 1) - idx]
+            reversedArr[(sizeOfArray - 1) - idx] = temp
         }
         
         return reversedArr
@@ -59,15 +59,15 @@ struct ArrayTechniques {
         return parsedArray
     }
     
-    func partitionArray(forKValue k : Int, withArray arr : [Int]) -> [Int] {
+    func partitionArray(for kValue : Int, withArray arr : [Int]) -> [Int] {
         var partitionedArray = arr
         var startIndex = 0
         var endIndex = partitionedArray.count - 1
         
         while startIndex < endIndex {
-            if startIndex <= k {
+            if startIndex <= kValue {
                 startIndex += 1
-            } else if endIndex > k {
+            } else if endIndex > kValue {
                 endIndex -= 1
             } else {
                 partitionedArray.swapAt(startIndex, endIndex)
@@ -82,54 +82,53 @@ struct ArrayTechniques {
     ///   - arr: unordered array (Integers for now)
     ///   - k: the index of element you want to find (e.g. - 4th smallest element in the array)
     /// - Returns: returns the array paritioned at that value of k and the value at that partition)
-    func kSelect(from arr : [Int], withKValue k : Int) -> (partitionedArray: [Int], kThSmallestelement : Int) {
-        var a = arr
-        var i = 0 , j = a.count - 1
-        var lower = 0, upper = a.count - 1
-        let kValue = k - 1
-        var currentGuess = a[kValue], temp = Int()
+    func kSelect(from arr : [Int], with kVal : Int) -> (partitionedArray: [Int], kThSmallestelement : Int) {
+        var aaa = arr
+        var iii = 0 , jjj = aaa.count - 1
+        var lower = 0, upper = aaa.count - 1
+        let kValue = kVal - 1
+        var currentGuess = aaa[kValue], temp = Int()
         
         // while the lower bound is greater than the upperbound
         while lower < upper {
             // set upper limit parititon values
-            i = lower // upper limit on lower partition
-            j = upper // lower limit on upper partition
+            iii = lower // upper limit on lower partition
+            jjj = upper // lower limit on upper partition
             // current partitioning value
-            currentGuess = a[kValue]
+            currentGuess = aaa[kValue]
             
-            while (i <= kValue) && (j >= kValue) {
+            while (iii <= kValue) && (jjj >= kValue) {
                 // extend the left partition
-                while a[i] < currentGuess {
-                    i += 1
+                while aaa[iii] < currentGuess {
+                    iii += 1
                 }
                 // extend the right partition
-                while a[j] > currentGuess {
-                    j -= 1
+                while aaa[jjj] > currentGuess {
+                    jjj -= 1
                 }
                 // swap (Note: can use Swift's swapAt method too...just wanted to be as explicit as possible)
-                temp = a[i]
-                a[i] = a[j]
-                a[j] = temp
+                temp = aaa[iii]
+                aaa[iii] = aaa[jjj]
+                aaa[jjj] = temp
                 
                 // extend and reduce i and j
-                i += 1
-                j -= 1
+                iii += 1
+                jjj -= 1
             }
             
             // if kth smallest element in left partition, update upper limit u of left partition
-            if i > kValue {
-                upper = j
+            if iii > kValue {
+                upper = jjj
             }
             // if kth smallest element in right partition, update lower limit l of right partition
-            if j < kValue {
-                lower = i
+            if jjj < kValue {
+                lower = iii
             }
             
         }
         
         // return elements and value of the kTh element
-        return (a, a[kValue])
+        return (aaa, aaa[kValue])
     }
-    
     
 }

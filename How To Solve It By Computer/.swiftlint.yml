@@ -9,3 +9,5 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
   - Source/ExcludedFolder
   - Source/ExcludedFile.swift
+# customizable
+line_length: 800

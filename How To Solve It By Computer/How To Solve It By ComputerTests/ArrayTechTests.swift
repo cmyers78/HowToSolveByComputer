@@ -53,7 +53,7 @@ class ArrayTechTests: XCTestCase {
     
     func testPartitionArray() {
         let arr = [6,28, 26, 25, 27, 29, 21, 33, 9, 7, 11, 16, 12, 24, 29, 6, 10, 11, 22, 8, 28, 2, 6, 5, 43, 21, 32, 8, 9, 16, 13]
-        let resultArray = arrayTechniques.partitionArray(forKValue: 17, withArray: arr)
+        let resultArray = arrayTechniques.partitionArray(for: 17, withArray: arr)
         let aboveValueCount = resultArray.filter { $0 > 17}.count
         print(aboveValueCount)
         XCTAssertEqual(aboveValueCount, 14)
@@ -62,7 +62,7 @@ class ArrayTechTests: XCTestCase {
     
     func testKthSmallestElement() {
         let arr = [4, 9, 1, 11, 2, 7, 8, 5]
-        let result = arrayTechniques.kSelect(from: arr, withKValue: 4)
+        let result = arrayTechniques.kSelect(from: arr, with: 4)
         // result should return the array sorted around the 4th smallest element
         let resultValue = result.kThSmallestelement
         XCTAssertEqual(resultValue, 5)
