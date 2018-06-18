@@ -1,3 +1,6 @@
 language: objective-c
-xcode_project: How To Solve It By Computer.xcodeproj
-xcode_scheme: How To Solve It By ComputerTests
+osx_image: xcode10
+
+script:
+  - xcodebuild test -project HowToSolveByComputer/How To Solve It By Computer/How To Solve It By Computer.xcodeproj -scheme How To Solve It By Computer -destination "platform=iOS Simulator,name=iPhone 7" -sdk iphonesimulator11.0 CODE_SIGNING_REQUIRED=NO
+  
