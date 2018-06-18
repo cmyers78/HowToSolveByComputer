@@ -10,6 +10,7 @@ import Foundation
 
 
 public class Node<T> {
+
     var value : T
     var next : Node<T>?
     var previous : Node<T>?

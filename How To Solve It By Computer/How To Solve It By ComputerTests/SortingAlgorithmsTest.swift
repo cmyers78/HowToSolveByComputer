@@ -28,6 +28,4 @@ class SortingAlgorithmsTest: XCTestCase {
         let expectedAnswer = [1, 2, 2, 4, 5, 6, 8, 9]
         XCTAssertEqual(answer1, expectedAnswer)
     }
-
-    
 }

@@ -19,7 +19,4 @@ class How_To_Solve_It_By_ComputerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-
-    
 }

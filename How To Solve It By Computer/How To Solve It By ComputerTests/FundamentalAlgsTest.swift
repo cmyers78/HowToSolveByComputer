@@ -31,22 +31,22 @@ class FundamentalAlgsTest: XCTestCase {
     func testCountingFunction() {
         let testScores = [98, 56, 84, 31, 12, 90, 75]
         
-        let a = fundAlgs.passOrFail(from: testScores, withPassValue: 50)
+        let aaaaa = fundAlgs.passOrFail(from: testScores, withPassValue: 50)
         
-        XCTAssertEqual(a, 5)
+        XCTAssertEqual(aaaaa, 5)
     }
     
     func testSummation() {
         let arrayOfInts = [1, 2, 3, 4, 5]
-        let b = fundAlgs.summation(from: arrayOfInts)
-        let c = fundAlgs.summation(from: [10, 5, 20, 100, 15, 25])
-        let d = fundAlgs.average(of: arrayOfInts)
-        let e = fundAlgs.squareOfSums(from: arrayOfInts)
+        let bbbbb = fundAlgs.summation(from: arrayOfInts)
+        let ccccc = fundAlgs.summation(from: [10, 5, 20, 100, 15, 25])
+        let ddddd = fundAlgs.average(of: arrayOfInts)
+        let eeeee = fundAlgs.squareOfSums(from: arrayOfInts)
         
-        XCTAssertEqual(b, 15)
-        XCTAssertEqual(c, 175)
-        XCTAssertEqual(d, 3)
-        XCTAssertEqual(e, 55)
+        XCTAssertEqual(bbbbb, 15)
+        XCTAssertEqual(ccccc, 175)
+        XCTAssertEqual(ddddd, 3)
+        XCTAssertEqual(eeeee, 55)
         
     }
     

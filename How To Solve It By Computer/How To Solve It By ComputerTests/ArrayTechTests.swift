@@ -12,7 +12,6 @@ import XCTest
 class ArrayTechTests: XCTestCase {
     var arrayTechniques : ArrayTechniques!
     
-    
     override func setUp() {
         super.setUp()
         arrayTechniques = ArrayTechniques()

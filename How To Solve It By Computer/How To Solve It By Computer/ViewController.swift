@@ -29,13 +29,13 @@ class ViewController: UIViewController {
         print(newList)
     }
     
-    func removeDuplicates(from list : inout LinkedList<String>) -> LinkedList<String> {
+    func removeDuplicates<T : Hashable>(from list : inout LinkedList<T>) -> LinkedList<T> {
         var start = list.first
-        var set = Set<String>()
+        var set = Set<T>()
         
         while start != nil {
             if set.contains(start!.value) {
-                let _ = list.remove(node: start!)
+                _ = list.remove(node: start!)
             } else {
                 set.insert(start!.value)
             }
@@ -43,6 +43,4 @@ class ViewController: UIViewController {
         }
         return list
     }
-
 }
-
